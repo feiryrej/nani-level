@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>難易度判定 · Nihongo Classifier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Shippori+Mincho:wght@400;700&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Floating background kanji -->
+    <div
+      class="bg-kanji"
+      style="
+        font-size: 9rem;
+        bottom: -10%;
+        left: 5%;
+        animation-duration: 35s;
+        animation-delay: -10s;
+      "
+    >
+      語
+    </div>
+    <div
+      class="bg-kanji"
+      style="
+        font-size: 6rem;
+        bottom: -10%;
+        left: 30%;
+        animation-duration: 28s;
+        animation-delay: -5s;
+      "
+    >
+      文
+    </div>
+    <div
+      class="bg-kanji"
+      style="
+        font-size: 11rem;
+        bottom: -10%;
+        left: 55%;
+        animation-duration: 42s;
+        animation-delay: -18s;
+      "
+    >
+      字
+    </div>
+    <div
+      class="bg-kanji"
+      style="
+        font-size: 7rem;
+        bottom: -10%;
+        left: 78%;
+        animation-duration: 31s;
+        animation-delay: -2s;
+      "
+    >
+      難
+    </div>
+    <div
+      class="bg-kanji"
+      style="
+        font-size: 8rem;
+        bottom: -10%;
+        left: 88%;
+        animation-duration: 38s;
+        animation-delay: -12s;
+      "
+    >
+      易
+    </div>
+
+    <div class="page">
+      <!-- HEADER -->
+      <header>
+        <div class="header-tag">COSC 402 · AI/ML Implementation</div>
+        <h1>
+          <span class="kanji-title">日本語難易度判定</span>
+          Nihongo Classifier
+        </h1>
+        <p class="subtitle">
+          Enter Japanese text · Discover its difficulty level
+        </p>
+      </header>
+
+      <div class="divider">
+        <span class="divider-center">✦</span>
+      </div>
+
+      <!-- INPUT CARD -->
+      <div class="card">
+        <label class="input-label" for="jp-input"
+          >Japanese Text · 日本語テキスト</label
+        >
+        <textarea
+          id="jp-input"
+          placeholder="日本語を入力してください…"
+          spellcheck="false"
+        ></textarea>
+
+        <div class="examples">
+          <span
+            style="
+              font-size: 0.7rem;
+              color: #8a7055;
+              align-self: center;
+              margin-right: 0.2rem;
+            "
+            >Try:</span
+          >
+          <button
+            class="example-btn"
+            onclick="setExample('おはようございます')"
+          >
+            おはようございます
+          </button>
+          <button
+            class="example-btn"
+            onclick="setExample('私は毎日学校に行きます')"
+          >
+            私は毎日学校に行きます
+          </button>
+          <button
+            class="example-btn"
+            onclick="
+              setExample(
+                '経済的な観点から見ると、この政策は複雑な問題を引き起こす可能性がある',
+              )
+            "
+          >
+            経済的な観点から…
+          </button>
+        </div>
+
+        <div class="btn-row">
+          <button class="submit" id="submit-btn" onclick="classify()">
+            判定する &nbsp;→
+          </button>
+        </div>
+      </div>
+
+      <!-- RESULT AREA -->
+      <div id="result"></div>
+
+      <!-- FOOTER -->
+      <footer>
+        Powered by <span>scikit-learn</span> +
+        <span>TensorFlow/Keras</span> &nbsp;·&nbsp; Dataset: JLPT Vocabulary
+        (8,505 entries) &nbsp;·&nbsp;
+        <span>COSC 402</span>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
