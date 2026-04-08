@@ -1,4 +1,4 @@
-/* ── RESET & BASE ───────────────────────────────────────────────────── */
+/* RESET & BASE */
 *,
 *::before,
 *::after {
@@ -30,7 +30,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ── BACKGROUND PATTERN ─────────────────────────────────────────────── */
+/* BACKGROUND PATTERN */
 body::before {
   content: "";
   position: fixed;
@@ -54,7 +54,7 @@ body::before {
   z-index: 0;
 }
 
-/* ── FLOATING KANJI DECORATIONS ─────────────────────────────────────── */
+/* FLOATING KANJI DECORATIONS */
 .bg-kanji {
   position: fixed;
   font-family: "Shippori Mincho", serif;
@@ -73,7 +73,7 @@ body::before {
   }
 }
 
-/* ── LAYOUT ─────────────────────────────────────────────────────────── */
+/* LAYOUT */
 .page {
   position: relative;
   z-index: 1;
@@ -84,7 +84,7 @@ body::before {
   padding: 2rem 1rem 4rem;
 }
 
-/* ── HEADER ─────────────────────────────────────────────────────────── */
+/* HEADER */
 header {
   text-align: center;
   margin-bottom: 2.5rem;
@@ -137,7 +137,7 @@ h1 .kanji-title {
   margin-top: 0.6rem;
 }
 
-/* ── DIVIDER ─────────────────────────────────────────────────────────── */
+/* DIVIDER */
 .divider {
   display: flex;
   align-items: center;
@@ -160,7 +160,7 @@ h1 .kanji-title {
   color: var(--gold);
 }
 
-/* ── CARD ────────────────────────────────────────────────────────────── */
+/* CARD */
 .card {
   width: 100%;
   max-width: 600px;
@@ -201,7 +201,7 @@ h1 .kanji-title {
   right: 0.7rem;
 }
 
-/* ── INPUT AREA ─────────────────────────────────────────────────────── */
+/* INPUT AREA */
 .input-label {
   font-family: "Space Mono", monospace;
   font-size: 0.65rem;
@@ -237,7 +237,7 @@ textarea::placeholder {
   color: #a99070;
 }
 
-/* ── EXAMPLES ─────────────────────────────────────────────────────────*/
+/* EXAMPLES */
 .examples {
   margin-top: 0.6rem;
   display: flex;
@@ -259,7 +259,7 @@ textarea::placeholder {
   color: var(--paper);
 }
 
-/* ── SUBMIT BUTTON ──────────────────────────────────────────────────── */
+/* SUBMIT BUTTON */
 .btn-row {
   margin-top: 1.2rem;
   display: flex;
@@ -311,7 +311,7 @@ button.submit.loading {
   }
 }
 
-/* ── RESULT AREA ────────────────────────────────────────────────────── */
+/* RESULT AREA */
 #result {
   width: 100%;
   max-width: 600px;
@@ -503,7 +503,7 @@ button.submit.loading {
   animation: fadeIn 0.3s ease both;
 }
 
-/* ── FOOTER ─────────────────────────────────────────────────────────── */
+/* FOOTER */
 footer {
   margin-top: 3rem;
   text-align: center;
