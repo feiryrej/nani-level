@@ -7,7 +7,7 @@ import os
 import pickle
 import numpy as np
 
-# ── Paths ────────────────────────────────────────────────────────────────────
+# Paths
 BASE_DIR   = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR  = os.path.join(BASE_DIR, "..", "models")
 
@@ -17,7 +17,7 @@ LOOKUP_PATH      = os.path.join(MODEL_DIR, "word_to_level.pkl")
 
 LABEL_NAMES = ["easy", "intermediate", "hard"]
 
-# ── Load models once at import time ──────────────────────────────────────────
+# Load models once at import time
 _rf_bundle     = None
 _nn_model      = None
 _word_to_level = None
@@ -43,7 +43,7 @@ def _load_models():
 
 _load_models()
 
-# ── Feature extraction (must match training/train.py) ────────────────────────
+# Feature extraction (must match training/train.py)
 
 def _is_kanji(c):
     return '\u4e00' <= c <= '\u9fff'
@@ -84,7 +84,7 @@ def _extract_features(text):
 
     return [kanji_ratio, hira_ratio, kata_ratio, avg_level, min_level, num_words, float(total)]
 
-# ── Public API ────────────────────────────────────────────────────────────────
+# Public API
 
 def predict(text: str) -> dict:
     """

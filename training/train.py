@@ -277,4 +277,4 @@ with open(os.path.join(MODEL_DIR, "word_to_level.pkl"), "wb") as f:
 print(f"  Saved Random Forest → models/difficulty_model.pkl")
 print(f"  Saved Neural Network → models/nn_model.keras")
 print(f"  Saved word lookup   → models/word_to_level.pkl")
-print("\n✅ Training complete! Run `uvicorn app:app --reload` to start the server.")
+print("\nTraining complete! Run `uvicorn app:app --reload` to start the server.")
