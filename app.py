@@ -9,6 +9,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+# Initialize the FastAPI app with metadata for auto-generated API docs (/docs)
 app = FastAPI(
     title="Nihongo Difficulty Classifier",
     description="Classifies Japanese text as Easy, Intermediate, or Hard using ML",
@@ -23,7 +24,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ── Request/Response Models ───────────────────────────────────────────────────
+# Request/Response Models
+# Pydantic models enforce type validation and auto-generate API schema docs.
 
 class PredictRequest(BaseModel):
     text: str
@@ -35,11 +37,11 @@ class PredictResponse(BaseModel):
     matched_vocab: list
     char_count: int
 
-# ── Routes ────────────────────────────────────────────────────────────────────
+# Routes
 
 @app.get("/")
 def root():
-    return {"message": "Nihongo Difficulty Classifier API is running 🎌"}
+    return {"message": "Nihongo Difficulty Classifier API is running"}
 
 @app.post("/predict", response_model=PredictResponse)
 def predict_difficulty(request: PredictRequest):
