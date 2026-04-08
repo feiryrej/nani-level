@@ -493,7 +493,7 @@ button.submit.loading {
   font-style: italic;
 }
 
-/* error */
+/* Error */
 .error-card {
   background: #fdf0ef;
   border: 1px solid var(--red);
