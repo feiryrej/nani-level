@@ -12,6 +12,11 @@ AI-Based Japanese Sentence Difficulty Classification Using Ensemble Machine Lear
 
 </div>
 
+## Demo
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/b6a141f1-ed09-4660-a0dd-a216cbc2251b" alt="Demo" width="80%">
+</div>
+
 ## Overview
 
 This project develops a Japanese sentence difficulty classification system using Artificial Intelligence and Machine Learning. Sentences are classified into three difficulty levels： **Easy**, **Intermediate**, and **Hard** based on linguistic features derived from a JLPT vocabulary dataset. The system combines a Random Forest classifier and a feedforward Neural Network through ensemble learning, and exposes predictions through a FastAPI backend paired with a static web interface.
